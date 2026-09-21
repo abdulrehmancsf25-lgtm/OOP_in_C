@@ -3,20 +3,20 @@
 using namespace std;
 
 int main() {
-            // fstream readWrite("C:/Users/Lenovo/Desktop/OOP_in_C/Char array & File Handling/file1.txt") ;
+            // fstream readWrite("file1.txt") ;
             //  if(!readWrite.is_open())
             //    return 1 ;
             // readWrite << 1 << 2 << 3 << 4 ;
             // readWrite.close() ;
            
-            // fstream in("C:/Users/Lenovo/Desktop/OOP_in_C/Char array & File Handling/file1.txt");
+            // fstream in("file1.txt");
             //  int n ;
             //  in >> n ;
             //  cout << n ;
             //  in.close() ;
            
             // write in file 
-            // ofstream wr("C:/Users/Lenovo/Desktop/OOP_in_C/Char array & File Handling/file1.txt");
+            // ofstream wr("file1.txt");
             // if(!wr.is_open())
             //   return 1 ;
             // while(1){
@@ -29,7 +29,7 @@ int main() {
             // wr.close();
              
             // appending in file
-            // ofstream wr2("C:/Users/Lenovo/Desktop/OOP_in_C/Char array & File Handling/file1.txt" ,ios::app);
+            // ofstream wr2("file1.txt" ,ios::app);
             // if(!wr2.is_open())
             //  return 1 ;
             // wr2 << endl  << 0 << " " << 3 ;
@@ -40,7 +40,7 @@ int main() {
           int cnt = 0 ;
           for(int i = 0 ; i < 100 ; i++)
             arr[i] = INT_MIN ;
-          ifstream read("C:/Users/Lenovo/Desktop/OOP_in_C/Char array & File Handling/file1.txt");
+          ifstream read("file1.txt");
           int n ; 
            while(read >> n){
              arr[cnt++] = n ;
