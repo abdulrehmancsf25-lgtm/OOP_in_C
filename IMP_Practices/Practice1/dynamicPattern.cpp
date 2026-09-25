@@ -4,12 +4,12 @@
 using namespace std;
 int main()
 {
-    // write in file
-    // ofstream wr("file1.txt");
-    // if(!wr.is_open())
-    //   return 1 ;
-    // while(1){
-    //     int n ;
+    //  //write in file
+    //  ofstream wr("file1.txt");
+    //  if(!wr.is_open())
+    //    return 1 ;
+    //  while(1){
+    //      int n ;
     //     cin >> n ;
     //     if(n == -1)
     //      break ;
@@ -18,7 +18,7 @@ int main()
     // wr.close();
 
     // now read file
-    // vector to store the digits
+    // array to store the digits
     int columns[100];
     int cnt = 0;
     // intitializing with INT_MIN to track no of digits
@@ -66,6 +66,8 @@ int main()
     // inner loop == max value in columns = maxi
     // column wise traverse
     // columns wise
+    if (maxi < 0)
+        maxi = 0;
     for (int j = maxi; j >= 0; j--)
     {
         for (int i = 0; i < cnt; i++)
