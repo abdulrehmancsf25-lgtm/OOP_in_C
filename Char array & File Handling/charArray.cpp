@@ -29,7 +29,7 @@ int main()
       cout << "Addresess : " << endl;
       cout << (void*)arr3 << "  " << (void*)&arr3[0] << endl ;
 
-     // other ways to creata char array
+     // other ways to create char array
      char ar1[] = "hello";
      // char ar1[] ; // not valid
      char ar2[] = {'h', 'e', 'l', 'l', 'o', '\0'};
@@ -38,7 +38,7 @@ int main()
     
 
 
-    // NOW TO AVOID BUFFER PROBLEM AN TO STORE WHOLE STRING
+    // NOW TO AVOID BUFFER PROBLEM AND TO STORE WHOLE STRING
     // USE get or getline(preferable) 
 
     // get lefts \n in stream VS getline handles it carefully
@@ -49,8 +49,18 @@ int main()
     cin.ignore(100 ,'\n') ; // for removing 0 and \n from stream
 
     cin.getline(arr , 10 , '\n') ;
-    cout << arr ; // no need for .ignore
+    cout << arr << endl ; // no need for .ignore if input size is <=size we give in getline 
+    // if size of our input increase bitfail flag eraise and programm is completed with out taking input again
+    
+  if(cin.fail()){ // solution 
+    cin.clear() ;
+    cin.ignore(100,'\n');
 
+  }
+  string s ;
+  cout << "last cin at s to check for getline " ;
+  cin >> s ;
+  cout << s  << endl;
 
     return 0;
 }
